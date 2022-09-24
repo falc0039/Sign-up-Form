@@ -141,6 +141,7 @@ input:hover, input:focus {
     body {
         display: flex;
         flex-flow: column;
+        background-color: goldenrod;
     }
     .right-container {
         padding: 2rem 0 0 0;
