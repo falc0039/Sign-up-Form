@@ -1,0 +1,195 @@
+@font-face {
+    font-family: Norse-bold;
+    src: url(fonts/Norse-Bold\(3\).otf);
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: Roboto, Arial;
+    margin: 0;
+}
+
+.logo-container {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.odin-logo {
+    height: 6rem;
+}
+
+.left-container {
+    position: relative;
+    background: url(Images/logo-background.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    width: clamp(10rem, 100%, 40rem);
+}
+
+.odin-text {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    margin: 1rem 0;
+    font-family: Norse-bold, Roboto, Arial;
+}
+
+.right-container {
+    background: goldenrod;
+    padding: 8rem 0 0 0;
+    
+}
+
+.page-header, .subtitle{
+    font-size: 1.2rem;
+    width: 34rem;
+    padding: 0 0 1.3rem 2rem;
+    font-weight: 500;
+}
+
+.subtitle {
+    padding-bottom: 3rem; 
+}
+
+.form {
+    background-color: white;
+    box-shadow: 3px 0 5px rgba(0,0,0,0.4);
+}
+
+.form-container {
+    /* display: flex;
+    justify-content: flex-start; */
+    
+    padding: 0 0 2rem 2rem;
+}
+
+
+.form-header {
+   padding: 1rem 0 0 2rem;
+   font-size: 1.2rem;
+}
+
+
+.form-container div {
+    padding: 1rem 0 0 0;
+}
+
+.form-row1, .form-row2 {
+    font-size: 0.8rem;
+}
+
+.pair {
+    display: flex;
+    font-size: 0.8rem;
+    column-gap: 3rem;
+}
+ 
+.input-pair {
+    display:flex;
+    flex-flow: column;
+}
+
+input {
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 5px 8px;
+}
+
+input:hover, input:focus {
+   outline: none;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 5px rgba(33, 86, 201, 0.5);
+    
+}
+
+.create-btn {
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    color: white;
+    background-color: darkgreen;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    margin: 2rem 0 2rem 2rem;
+    cursor: pointer;
+}
+
+.already-text {
+    margin: 0 0 0 2rem;
+}
+
+.already-text a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+@media (max-width: 800px) {
+    .left-container {
+        min-height: 146px;   
+        width: 100%;
+    }
+    .logo-container {
+        top: 20px;
+        background-color: rgba(0,0,0,0);
+    }
+    body {
+        display: flex;
+        flex-flow: column;
+    }
+    .right-container {
+        padding: 2rem 0 0 0;
+        text-align: center;
+        margin: 0;
+    }
+    .create-btn {
+        margin: 2rem 0 2rem 0;
+    }
+    .already-text {
+        margin: 0 0 2rem 0;
+    }
+    .page-header, .subtitle{
+        width: fit-content;
+        padding: 0 1rem 1.3rem 1rem;
+        margin-right: 0;
+    }
+    .subtitle {
+        width: auto;
+    }
+    .form-container {
+        padding-left: 0;
+    }
+    .pair {
+        justify-content: center;
+    }
+    .form-header {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        flex-flow: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-header {
+        text-align: center;
+        margin: 0;
+    }
+    .pair {
+        flex-flow: column;
+        align-items: center;
+    }
+    input {
+        width: 70vw;
+    }
+
+}
